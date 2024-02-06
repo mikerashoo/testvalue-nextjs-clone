@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary {
+  color: rgb(0, 208, 148);
+}
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
