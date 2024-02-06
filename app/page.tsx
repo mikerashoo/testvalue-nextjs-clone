@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/Navbar";
-import BannerWrapper from "@/components/banner-sections/BannerWrapper"; 
+import BannerWrapper from "@/components/banner-section/BannerWrapper"; 
+import ShortcutsWrapper from "@/components/shortcut-section/ShortcutsWrapper";
 import { Header } from "antd/es/layout/layout";
 
 export default function Home() {
@@ -13,10 +14,18 @@ export default function Home() {
     backgroundColor: 'white',
   };
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col w-full">
         <Navbar />
      <BannerWrapper />
+
+     <div className="flex flex-col items-center gap-4 justify-center ">
+      <div className="flex flex-col w-full md:w-[1160px]">
  
+      <ShortcutsWrapper />
+      </div>
+     
+     </div>
+    
     </main>
   );
 }
