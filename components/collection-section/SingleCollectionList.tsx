@@ -2,7 +2,7 @@
 import { ICollection } from "@/models/collection_types";
 import React from "react";
 import SingleProduct from "./SingleProduct";
-import Slider from "react-slick"; 
+import Slider from "react-slick";
 function SingleCollectionList(props: { collection: ICollection }) {
   const collection = props.collection;
 
@@ -16,15 +16,15 @@ function SingleCollectionList(props: { collection: ICollection }) {
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
-  return  (
+  return (
     <>
-    <div className="flex md:hidden  w-full items-start flex-wrap gap-x-2 gap-y-4">
+      <div className="flex md:hidden  w-full items-start flex-wrap gap-x-2 gap-y-4">
         {collection.items.map((item) => (
           <SingleProduct key={item.key} item={item} />
         ))}
       </div>
-    <div className="hidden md:grid  grid-flow-row-dense grid-cols-5 gap-4">
-          <div className="col-span-1 ">
+      <div className="hidden md:grid  grid-flow-row-dense grid-cols-5 gap-4">
+        <div className="col-span-1 ">
           <div className="css-6z2zhi ">{collection.title}</div>
           <div className="css-1m2ojv8">{collection.subtitle}</div>
         </div>
@@ -36,9 +36,9 @@ function SingleCollectionList(props: { collection: ICollection }) {
             ))}
           </Slider>
         </div>
-    </div>
+      </div>
     </>
-  ) 
+  );
 }
 
 export default SingleCollectionList;
